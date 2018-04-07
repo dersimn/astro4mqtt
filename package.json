@@ -1,0 +1,26 @@
+{
+  "name": "astro4mqtt",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dersimn/astro4mqtt.git"
+  },
+  "author": "Simon Christmann <simon@christmann.email>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dersimn/astro4mqtt/issues"
+  },
+  "homepage": "https://github.com/dersimn/astro4mqtt#readme",
+  "dependencies": {
+    "mqtt-smarthome-connect": "latest",
+    "suncalc": "^1.8.0",
+    "yalm": "^4.1.0",
+    "yargs": "^11.0.0",
+    "yetanothertimerlibrary": "latest"
+  }
+}
