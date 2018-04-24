@@ -21,6 +21,6 @@
     "suncalc": "^1.8.0",
     "yalm": "^4.1.0",
     "yargs": "^11.0.0",
-    "yetanothertimerlibrary": "latest"
+    "yetanothertimerlibrary": "^2.1.0"
   }
 }

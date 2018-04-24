@@ -19,7 +19,7 @@ const config = require('yargs')
     .default({
         name: 'astro',
         'mqtt-url': 'mqtt://127.0.0.1',
-        'update-interval': 60000,
+        'update-interval': 10000,
         'l': -0.1,
         'b': 51.5
     })
@@ -44,6 +44,8 @@ mqtt.connect();
 mqtt.on('connect', () => {
     log.info('mqtt connected', config.mqttUrl);
     mqtt.publish(config.name + '/connected', '1', {retain: true});
+
+    calc.start(config.updateInterval).exec();
 });
 
 var calc = new Timer(() => {
@@ -52,4 +54,4 @@ var calc = new Timer(() => {
 
 	mqtt.publish(config.name + "/status/sun/azimuth", sunPos.azimuth * 180 / Math.PI);
 	mqtt.publish(config.name + "/status/sun/altitude", sunPos.altitude * 180 / Math.PI);
-}, config.updateInterval).exec(1000);
+});
